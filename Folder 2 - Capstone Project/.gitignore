@@ -1,0 +1,12 @@
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# PyTest cache
+.pytest_cache/
+
+# Real test data containing credentials
+test_data/test_data.csv
