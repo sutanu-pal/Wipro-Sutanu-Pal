@@ -102,25 +102,100 @@ Capstone Project/
 
 Page-specific locators and actions are maintained separately from test cases using the Page Object Model (POM).
 
+The page objects include:
+
+- `LoginPage` – handles login page elements and actions.
+- `ProductsPage` – handles product navigation and product search operations.
+
+This improves code readability, reusability, and maintainability.
+
 ### 🔧 Configuration Management
 
-Application URL, browser and timeout values are maintained in `config.ini`.
+Application URL, browser, and timeout values are maintained in:
+
+```text
+config/config.ini
+```
+
+The `ConfigReader` utility reads these configuration values during test execution.
 
 ### 📊 Test Data Management
 
-Test data is maintained in CSV format and read using the CSV Reader utility.
+Test data is maintained separately in CSV format.
+The `CSVReader` utility reads login credentials and product search data from the CSV file.
+
+The test data contains:
+
+- Username
+- Password
+- Product name
 
 ### 🏭 Driver Factory
 
-The Driver Factory creates and configures the Selenium WebDriver.
+The `DriverFactory` is responsible for creating and configuring the Selenium WebDriver.
+It provides a centralized way to initialize the browser used by the automation tests.
+
+### 🧰 Utility Classes
+
+Reusable utility classes are used to handle common framework operations and keep the test cases clean and maintainable.
+
+The utility classes include:
+
+- `ConfigReader` – reads configuration values from `config.ini`.
+- `CSVReader` – reads test data from CSV files.
+- `DriverFactory` – creates and configures the Selenium WebDriver.
+- `ScreenshotUtility` – captures screenshots when PyTest tests fail.
+
+These utilities can be reused across multiple test cases and help reduce duplicate code.
+
+### 🧪 Unittest
+
+Unittest is used to implement and execute a separate login test case using Python's built-in `unittest` framework.
+
+The Unittest test case is implemented in:
+
+```text
+tests/test_unittest_login.py
+```
+
+It uses `setUpClass()` for test setup, `tearDownClass()` for browser cleanup, and Unittest assertions for test validation.
+
+### 🧪 PyTest
+
+PyTest is used as the primary test execution framework for running the automation test cases.
+
+The PyTest test cases are implemented in:
+
+```text
+tests/test_login.py
+tests/test_product_search.py
+```
+
+PyTest provides test discovery, assertions, fixtures, and test execution capabilities for the framework.
 
 ### 📸 Screenshot on Failure
 
 The framework automatically captures a screenshot when a PyTest test fails.
 
+Screenshots are saved in:
+
+```text
+screenshots/
+```
+
+The screenshot utility helps in identifying and debugging failures during test execution.
+
 ### 📈 HTML Reporting
 
-PyTest HTML generates an execution report containing test results.
+The framework uses `pytest-html` to generate an HTML test execution report.
+
+The generated report is available at:
+
+```text
+reports/report.html
+```
+
+The report provides the execution status of the automated test cases, including passed and failed tests.
 
 ---
 
