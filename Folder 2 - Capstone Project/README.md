@@ -1,18 +1,17 @@
 # Selenium Python Automation Framework
 
-## Capstone Project
+## 🧩 Capstone Project
 
 A Selenium WebDriver automation framework developed using Python for automating an E-Commerce web application.
 
-### Application Under Test
+### 🎯 Application Under Test
 
-Automation Exercise
-
+**Automation Exercise**
 https://automationexercise.com/
 
 ---
 
-## Objective
+## 🛠️ Objective
 
 The objective of this project is to design and develop a reusable Selenium Python automation framework using:
 
@@ -29,7 +28,7 @@ The objective of this project is to design and develop a reusable Selenium Pytho
 
 ---
 
-## Project Scenarios
+## 📋 Project Scenarios
 
 ### 1. Login
 
@@ -56,7 +55,7 @@ The framework automates:
 
 ---
 
-## Project Structure
+## 🏗️ Project Structure
 
 ```text
 Capstone Project/
@@ -93,47 +92,164 @@ Capstone Project/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
+```
+
 ---
 
-## Framework Components
+## ⚙️ Framework Components
 
-### Page Object Model
+### 📄 Page Object Model
 
 Page-specific locators and actions are maintained separately from test cases using the Page Object Model (POM).
 
-### Configuration Management
+### 🔧 Configuration Management
 
 Application URL, browser and timeout values are maintained in `config.ini`.
 
-### Test Data Management
+### 📊 Test Data Management
 
 Test data is maintained in CSV format and read using the CSV Reader utility.
 
-### Driver Factory
+### 🏭 Driver Factory
 
 The Driver Factory creates and configures the Selenium WebDriver.
 
-### Screenshot on Failure
+### 📸 Screenshot on Failure
 
 The framework automatically captures a screenshot when a PyTest test fails.
 
-### HTML Reporting
+### 📈 HTML Reporting
 
 PyTest HTML generates an execution report containing test results.
 
 ---
 
-## Test Execution
+## ▶️ Test Execution
 
-### Prerequisites
+### ✅ Prerequisites
 
 - Python 3.x
 - Google Chrome
 - Internet connection
 
-### Activate Virtual Environment
+### 1️⃣ Clone the Repository
+
+```bash
+git clone <your-repo-url>
+cd "Capstone Project"
+```
+
+### 2️⃣ Create Virtual Environment
+
+Windows:
+
+```bash
+python -m venv venv
+```
+
+macOS / Linux:
+
+```bash
+python3 -m venv venv
+```
+
+### 3️⃣ Activate Virtual Environment
 
 Windows:
 
 ```bash
 venv\Scripts\activate
+```
+
+macOS / Linux:
+
+```bash
+source venv/bin/activate
+```
+
+### 4️⃣ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 5️⃣ Configure Test Settings
+
+Update the base URL, browser, and timeout values in:
+
+```text
+config/config.ini
+```
+
+### 6️⃣ Update Test Data
+
+Add or update credentials and search values in:
+
+```text
+test_data/test_data.example.csv
+```
+
+### 7️⃣ Run Tests
+
+Run all PyTest test cases:
+
+```bash
+pytest
+```
+
+Run a specific test file:
+
+```bash
+pytest tests/test_login.py
+```
+
+Run Unittest test cases:
+
+```bash
+python -m unittest tests/test_unittest_login.py
+```
+
+---
+
+## 📑 Test Reports
+
+After execution, the HTML report is generated in:
+
+```text
+reports/report.html
+```
+
+Failure screenshots are automatically saved in:
+
+```text
+screenshots/
+```
+
+and linked inside the HTML report.
+
+---
+
+## 🧰 Tech Stack
+
+| Tool / Library      | Purpose                          |
+|----------------------|-----------------------------------|
+| Python               | Core programming language         |
+| Selenium WebDriver   | Browser automation                |
+| PyTest               | Test execution framework          |
+| Unittest             | Alternate test execution framework|
+| pytest-html          | HTML report generation            |
+| configparser         | Reading `config.ini`              |
+| csv                  | Data-driven test inputs           |
+
+---
+
+## 📌 Notes
+
+- This framework follows the Page Object Model to separate locators and page logic from test scripts, improving readability and maintainability.
+- The framework can be extended by adding new page objects, test cases, and CSV data sets as the application grows.
+
+---
+
+## 📄 License
+
+This project is intended for educational and portfolio purposes.
