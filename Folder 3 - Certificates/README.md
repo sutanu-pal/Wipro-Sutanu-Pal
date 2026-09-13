@@ -8,4 +8,4 @@ This folder contains certificates earned through the prescribed courses.
 
 [📄 View Certificate](./Python%20for%20Automation.pdf)
 
-[🔗 Verify Certificate on Coursera](https://coursera.org/verify/3X7XDFQTH20)
+[🔗 Verify Certificate on Coursera](https://coursera.org/verify/3X7XDFQTH20E)
