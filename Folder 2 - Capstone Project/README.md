@@ -11,6 +11,18 @@ https://automationexercise.com/
 
 ---
 
+## 📄 Project Report
+
+The complete project report is available as a PDF document.
+📄 [View Report](./Capstone%20Proj%20Report.pdf)
+
+## 🎥 Demonstration Video
+
+The complete project demonstration video is available on Google Drive. The video demonstrates the framework structure, Page Object Model, utility classes, test data management, login automation, product search automation, Unittest, PyTest execution, HTML reporting, and screenshot capture on failure.
+🔗 [Watch Project Demonstration Video](https://drive.google.com/file/d/1JZVRopVR7nSRjYEk3pEha_d0gAEBlS6F/view?usp=sharing)
+
+---
+
 ## 🛠️ Objective
 
 The objective of this project is to design and develop a reusable Selenium Python automation framework using:
